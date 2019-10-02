@@ -771,7 +771,7 @@ function get_avatar( $id_or_email, $size = 96, $default = '', $alt = '', $args =
             $id = $user->ID;
     }
 
-	if ( ! $args['force_display'] && ! get_option( 'show_avatars' ) ) {
+	if ( !isset($args['force_display']) && ! get_option( 'show_avatars' ) ) {
 		return false;
 	}
 
